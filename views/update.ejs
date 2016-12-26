@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <form action="/update" method="post">
+      <input type="hidden" name="_id" value="<%=_id%>">
+      제목: <input type="text" name="title"><br>
+      이름: <input type="text" name="name"><br>
+      비번: <input type="password" name="password"><br>
+      내용: <input type="textarea" name="contests">
+      <button type="submit">완료</button>
+    </form>
+  </body>
+</html>
