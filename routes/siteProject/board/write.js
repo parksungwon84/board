@@ -5,7 +5,7 @@ var Board = require('./board');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('write');
+  res.render('siteProject/board/write');
 });
 
 router.post('/', function (req, res) {

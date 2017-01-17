@@ -6,11 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-var index = require('./routes/index');
-var write = require('./routes/write');
-var list = require('./routes/list');
-var update = require('./routes/update');
-var deletes = require('./routes/deletes');
+var login = require('./routes/siteProject/login');
+var write = require('./routes/siteProject/board/write');
+var list = require('./routes/siteProject/board/list');
+var update = require('./routes/siteProject/board/update');
+var deletes = require('./routes/siteProject/board/deletes');
 
 var app = express();
 
@@ -38,7 +38,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
+app.use('/', login);
 app.use('/write', write);
 app.use('/list', list);
 app.use('/update', update);

@@ -6,7 +6,7 @@ var Board = require('./board');
 /* GET users listing. */
 router.get('/:_id', function(req, res, next) {
   var _id = req.params._id;
-  res.render('update', {
+  res.render('siteProject/board/update', {
     _id: _id
   });
 });

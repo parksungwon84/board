@@ -38,7 +38,7 @@ router.get('/:page', function(req, res, next) {
     var max = cnt - ((page - 1) * size);
     Board.find().skip(size * (page - 1)).limit(size).sort({date: -1}).exec(function (err, rows) {
       console.log('rows : ', rows);
-      res.render('list', {
+      res.render('siteProject/board/list', {
         rows: rows,
         page: page,
         pageSize: pageSize,
